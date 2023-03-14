@@ -12,7 +12,7 @@ export const AuthProvider = ({children}) => {
     useEffect(() => {
         (async () => {
             try {
-                let values = await AsyncStorage.multiGet(["auth", "name", "email"]);
+                let values = await AsyncStorage.multiGet(["auth", "name", "email",'avatar','last_name']);
                 console.log(values);
                 const data = Object.fromEntries(values);
                 console.log(data);

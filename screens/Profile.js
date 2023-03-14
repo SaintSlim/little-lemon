@@ -78,7 +78,7 @@ const Profile = ({ navigation, route }) => {
                     : 
                     <Image source={{ uri: userInfo.image }} resizeMode={"contain"} style={[styles.avatar, { height: 70, borderRadius: 35, width: 70}]}/>
                 }
-                <TouchableOpacity style={styles.buttonContainer}>
+                <TouchableOpacity style={styles.buttonContainer} onPress={handleChangeImage}>
                     <Text style={styles.buttonText}>Change</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.buttonContainer, { backgroundColor: "white"}]}>
@@ -230,6 +230,9 @@ const styles = StyleSheet.create({
         width: "100%",
         height: 40,
         marginBottom: 30,
+        fontSize: 18,
+        fontWeight: '600',
+        color: "#495E57",
     },
     logo: {
         width: 140,
